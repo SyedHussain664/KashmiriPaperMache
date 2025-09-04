@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kashmiri Paper Mache</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent:#C89B2D;
+      --dark:#111827;
+      --muted:#6b7280;
+    }
+    body {
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:#fbfaf8;
+      color:#1f2933;
+    }
+    header {
+      position:sticky;
+      top:0;
+      background:rgba(255,255,255,.7);
+      backdrop-filter:blur(8px);
+      padding:14px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:50;
+    }
+    header h1 {
+      font-family:'Playfair Display',serif;
+      font-size:18px;
+      margin:0;
+      color:var(--dark);
+    }
+    nav a {
+      margin:0 10px;
+      text-decoration:none;
+      color:#1f2933;
+      font-weight:600;
+      font-size:14px;
+    }
+    nav a:hover { color:var(--accent); }
+    .cta {
+      background:var(--dark);
+      color:#fff;
+      padding:8px 14px;
+      border-radius:999px;
+      font-weight:700;
+    }
+    .hero {
+      background:url('optimized_images/product_1.jpg') center/cover no-repeat;
+      position:relative;
+      color:#fff;
+      text-align:center;
+      padding:100px 20px;
+    }
+    .hero::after {
+      content:'';
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.5);
+    }
+    .hero-inner {
+      position:relative;
+      z-index:2;
+      max-width:900px;
+      margin:auto;
+    }
+    .hero h2 {
+      font-family:'Playfair Display',serif;
+      font-size:40px;
+      margin:0 0 10px;
+    }
+    .hero p { margin:0 auto 18px; max-width:700px; }
+    .btn {
+      background:var(--accent);
+      color:#000;
+      padding:12px 24px;
+      border-radius:30px;
+      font-weight:700;
+      text-decoration:none;
+    }
+    .btn:hover { opacity:0.9; }
+    section {
+      padding:60px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+    h2 {
+      font-family:'Playfair Display',serif;
+      font-size:28px;
+      text-align:center;
+      margin-bottom:12px;
+    }
+    p.lead {
+      text-align:center;
+      color:var(--muted);
+      margin-bottom:20px;
+    }
+    .gallery {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+    }
+    .gallery img {
+      width:100%;
+      border-radius:12px;
+      cursor:pointer;
+      box-shadow:0 4px 14px rgba(0,0,0,.15);
+    }
+    .lightbox {
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.9);
+      align-items:center;
+      justify-content:center;
+      z-index:1000;
+    }
+    .lightbox img {
+      max-width:90%;
+      max-height:80%;
+      border-radius:10px;
+    }
+    .close {
+      position:absolute;
+      top:20px;
+      right:30px;
+      color:#fff;
+      font-size:36px;
+      cursor:pointer;
+    }
+    form {
+      display:grid;
+      gap:12px;
+      background:#fff;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,.1);
+    }
+    input,textarea {
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:6px;
+      font-size:15px;
+    }
+    textarea { min-height:120px; }
+    button {
+      background:var(--dark);
+      color:#fff;
+      padding:12px;
+      border:none;
+      border-radius:6px;
+      font-weight:700;
+      cursor:pointer;
+    }
+    button:hover { opacity:0.9; }
+    footer {
+      background:#111827;
+      color:#ccc;
+      text-align:center;
+      padding:20px;
+      margin-top:30px;
+    }
+    .whatsapp {
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:linear-gradient(135deg,#25D366,#128C7E);
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:100;
+      cursor:pointer;
+    }
+    .whatsapp svg { width:26px; height:26px; color:#fff; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Kashmiri Paper Mache</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#quote">Enquiry</a>
+    <a href="#contact" class="cta">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <h2>Authentic Kashmiri Papier-Mâché</h2>
+    <p>Handcrafted art and decor, made with love in Srinagar</p>
+    <a href="#products" class="btn">Explore Gallery</a>
+  </div>
+</div>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p class="lead">Kashmiri Paper Mache is a Srinagar-based house of artisans. We create authentic Kashmiri art using centuries-old papier-mâché techniques.</p>
+</section>
+
+<section id="products">
+  <h2>Our Products</h2>
+  <p class="lead">Click an image to view larger</p>
+  <div class="gallery">
+    <img src="optimized_images/product_1.jpg" alt="Product 1">
+    <img src="optimized_images/product_2.jpg" alt="Product 2">
+    <img src="optimized_images/product_3.jpg" alt="Product 3">
+    <img src="optimized_images/product_4.jpg" alt="Product 4">
+    <img src="optimized_images/product_5.jpg" alt="Product 5">
+    <img src="optimized_images/product_6.jpg" alt="Product 6">
+    <img src="optimized_images/product_7.jpg" alt="Product 7">
+    <img src="optimized_images/product_8.jpg" alt="Product 8">
+    <img src="optimized_images/product_9.jpg" alt="Product 9">
+  </div>
+</section>
+
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="" alt="Expanded">
+</div>
+
+<section id="quote">
+  <h2>Send an Enquiry</h2>
+  <form id="enquiryForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send on WhatsApp</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact Info</h2>
+  <p class="lead"><strong>Phone:</strong> +91 9419075019</p>
+  <p class="lead"><strong>Email:</strong> javidiqbalsyed@gmail.com</p>
+  <p class="lead"><strong>Address:</strong> Ali Park, Zadibal, Srinagar, Kashmir, 190011</p>
+</section>
+
+<div class="whatsapp" id="whatsappBtn" title="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path fill="currentColor" d="M16 .5C7.44.5.5 7.44.5 16c0 2.9.77 5.73 2.24 8.2L.5 31.5l7.62-2.19A15.4 15.4 0 0 0 16 31.5c8.56 0 15.5-6.94 15.5-15.5S24.56.5 16 .5zM16 28a12 12 0 0 1-6.1-1.7l-.4-.2-4.5 1.3 1.3-4.4-.2-.4A11.9 11.9 0 1 1 16 28z"/></svg>
+</div>
+
+<footer>
+  <p>© 2025 Kashmiri Paper Mache. All rights reserved.</p>
+</footer>
+
+<script>
+// Lightbox
+const imgs = document.querySelectorAll('.gallery img');
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close');
+imgs.forEach(img => img.addEventListener('click', ()=>{lbImg.src=img.src;lightbox.style.display='flex';}));
+closeBtn.onclick=()=>lightbox.style.display='none';
+lightbox.onclick=(e)=>{if(e.target==lightbox)lightbox.style.display='none';};
+document.addEventListener('keydown',(e)=>{if(e.key==='Escape')lightbox.style.display='none';});
+
+// WhatsApp
+document.getElementById("enquiryForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  let name=document.getElementById("name").value;
+  let email=document.getElementById("email").value;
+  let message=document.getElementById("message").value;
+  let text=`Hello, my name is ${name}. My email: ${email}. Message: ${message}`;
+  let url="https://wa.me/919419075019?text="+encodeURIComponent(text);
+  window.open(url,"_blank");
+});
+document.getElementById("whatsappBtn").onclick=()=>{
+  let url="https://wa.me/919419075019?text="+encodeURIComponent("Hello, I want to enquire about your papier-mâché products.");
+  window.open(url,"_blank");
+};
+</script>
+
+</body>
+</html>
